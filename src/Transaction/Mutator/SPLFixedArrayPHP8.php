@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace BitWasp\Bitcoin\Transaction\Mutator;
 
-class SPLFixedArrayPHP8 implements Iterator {
+class SPLFixedArrayPHP8 implements \Iterator {
     private $keyMask;
     private $values;
     private $index;
