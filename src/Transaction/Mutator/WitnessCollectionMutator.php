@@ -20,7 +20,7 @@ class WitnessCollectionMutator extends AbstractCollectionMutator
             $set[$i] = new InputMutator($input);
         }
 
-        $this->set = \SplFixedArrayPHP8::fromArray($set, false);
+        $this->set = SplFixedArrayPHP8::fromArray($set, false);
     }
 
     /**
