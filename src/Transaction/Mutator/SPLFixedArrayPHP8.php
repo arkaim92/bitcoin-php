@@ -19,7 +19,7 @@ class SPLFixedArrayPHP8 implements \Iterator {
         $this->index = 0;
     }
 
-    public function current(): int {
+    public function current() {
         return $this->values[$this->index] ?? 0;
     }
 
