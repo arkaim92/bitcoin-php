@@ -40,6 +40,14 @@ class SPLFixedArrayPHP8 implements \Iterator {
     public function valid(): bool {
         return $this->index < $this->values->count();
     }
+    
+    public function offsetExists($offset): bool {
+        return isset($this->values[$offset]);
+    }
+
+    public function offsetGet($offset) {
+        return $this->values[$offset];
+    }
 }
 
 ?>
