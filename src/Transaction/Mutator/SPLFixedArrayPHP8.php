@@ -31,8 +31,10 @@ class SPLFixedArrayPHP8 implements \Iterator {
         ++$this->index;
     }
     
-    public static function fromArray($array,$preserveKeys = true) {
-        $this->values = \SPLFixedArray::fromArray($array, $preserveKeys);
+     public static function fromArray($array,$preserveKeys = true) {
+        $self = new self();
+        $self->values = \SPLFixedArray::fromArray($array, $preserveKeys);
+        return $self;
     }
 
     public function valid(): bool {
