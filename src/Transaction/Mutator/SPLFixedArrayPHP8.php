@@ -10,7 +10,7 @@ class SPLFixedArrayPHP8 implements \Iterator {
     private $index;
 
     public function __construct(int $digits = 1) {
-        $this->values = new SPLFixedArray($digits);
+        $this->values = new \SPLFixedArray($digits);
         $this->keyMask = "%0{$digits}s";
         $this->index = 0;
     }
@@ -32,7 +32,7 @@ class SPLFixedArrayPHP8 implements \Iterator {
     }
     
     public static function fromArray($array,$preserveKeys = true) {
-        return SPLFixedArray::fromArray($array, $preserveKeys);
+        $this->values = \SPLFixedArray::fromArray($array, $preserveKeys);
     }
 
     public function valid(): bool {
