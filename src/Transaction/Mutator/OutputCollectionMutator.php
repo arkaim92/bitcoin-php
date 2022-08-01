@@ -14,7 +14,7 @@ class OutputCollectionMutator extends AbstractCollectionMutator
     public function __construct(array $outputs)
     {
         /** @var OutputMutator[] $set */
-        $this->set = new \SplFixedArray(count($outputs));
+        $this->set = new SplFixedArrayPHP8(count($outputs));
         foreach ($outputs as $i => $output) {
             /** @var int $i */
             $this->set[$i] = new OutputMutator($output);
