@@ -14,7 +14,7 @@ class OutputCollectionMutator extends AbstractCollectionMutator
     public function __construct(array $outputs)
     {
         /** @var OutputMutator[] $set */
-        $this->set = new SplFixedArrayPHP8(count($outputs));
+        $this->set = new SPLFixedArrayPHP8(count($outputs));
         foreach ($outputs as $i => $output) {
             /** @var int $i */
             $this->set[$i] = new OutputMutator($output);
@@ -67,7 +67,7 @@ class OutputCollectionMutator extends AbstractCollectionMutator
             throw new \RuntimeException('Invalid start or length');
         }
 
-        $this->set = \SplFixedArray::fromArray(array_slice($this->set->toArray(), $start, $length), false);
+        $this->set = SPLFixedArray::fromArray(array_slice($this->set->toArray(), $start, $length), false);
         return $this;
     }
 
