@@ -20,7 +20,7 @@ class WitnessCollectionMutator extends AbstractCollectionMutator
             $set[$i] = new InputMutator($input);
         }
 
-        $this->set = SplFixedArrayPHP8::fromArray($set, false);
+        $this->set = SPLFixedArrayPHP8::fromArray($set, false);
     }
 
     /**
@@ -69,7 +69,7 @@ class WitnessCollectionMutator extends AbstractCollectionMutator
             throw new \RuntimeException('Invalid start or length');
         }
 
-        $this->set = \SplFixedArray::fromArray(array_slice($this->set->toArray(), $start, $length), false);
+        $this->set = SPLFixedArray::fromArray(array_slice($this->set->toArray(), $start, $length), false);
         return $this;
     }
 
