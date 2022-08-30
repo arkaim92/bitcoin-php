@@ -69,7 +69,7 @@ class InputCollectionMutator extends AbstractCollectionMutator
             throw new \RuntimeException('Invalid start or length');
         }
 
-        $this->set = \SplFixedArray::fromArray(array_slice($this->set->toArray(), $start, $length), false);
+        $this->set = SPLFixedArray::fromArray(array_slice($this->set->toArray(), $start, $length), false);
         return $this;
     }
 
