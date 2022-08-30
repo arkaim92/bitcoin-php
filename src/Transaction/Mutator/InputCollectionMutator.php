@@ -20,7 +20,7 @@ class InputCollectionMutator extends AbstractCollectionMutator
             $set[$i] = new InputMutator($input);
         }
 
-        $this->set = SplFixedArrayPHP8::fromArray($set, false);
+        $this->set = SPLFixedArrayPHP8::fromArray($set, false);
     }
 
     /**
